@@ -1,0 +1,136 @@
+// Mixins for reusable styles
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+@mixin gradient-background {
+    background: linear-gradient(135deg,
+            #1a1a2e 0%,
+            #16213e 50%,
+            #0f3460 100%);
+}
+
+@mixin content-styles {
+    max-width: 800px;
+    width: 90%;
+    padding: 2rem;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+// Apply styles
+body {
+    @include gradient-background;
+    @include flex-center;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: #ffffff;
+
+    .container {
+        @include content-styles;
+        text-align: center;
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+    }
+}
+
+.main-holder {
+    @include flex-center;
+    text-align: center;
+    flex-direction: column;
+    gap: 24px;
+    width: 50%;
+}
+
+#number {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    border: 1px solid #ffffff;
+    padding: 12px 16px;
+    font-size: 16px;
+    color: #1a1a2e;
+
+    &:focus {
+        outline: none;
+        border: 1px solid #1a1a2e;
+    }
+}
+
+.button-holder {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.btn {
+    height: auto !important;
+    padding: 12px 24px;
+    color: #fff;
+    border: 1px solid #ffffff;
+    background-color: transparent;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 16px;
+    width: 100%;
+
+    &:hover {
+        background-color: rgba(224, 224, 224, .15);
+        border: 1px solid #ffffff;
+        color: #ffffff;
+        cursor: pointer;
+    }
+
+    &:active {
+        background-color: #fff;
+        // border: 1px solid #ffffff;
+        color: #292942;
+        cursor: pointer;
+    }
+
+
+}
+
+.clear-btn {
+    color: #fff;
+    border: 1px solid transparent;
+    background-color: transparent;
+    font-weight: 500;
+
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.15);
+        border: 1px solid transparent;
+        color: #ffffff;
+        cursor: pointer;
+    }
+
+    &:active {
+        background-color: rgba(224, 224, 224, .30);
+        border: 1px solid transparent;
+        color: #ffffff;
+        cursor: pointer;
+    }
+}
+
+#output {
+    font-family: 'Times New Roman', Times, serif;
+    color: #ffffff;
+    font-size: 40px;
+}
