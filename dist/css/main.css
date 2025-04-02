@@ -7,6 +7,7 @@ body {
   margin: 0;
   font-family: "Arial", sans-serif;
   color: #ffffff;
+  overflow-x: hidden;
 }
 body .container {
   max-width: 800px;
@@ -31,6 +32,15 @@ body .container p {
   margin-bottom: 1rem;
 }
 
+#bg-icon {
+  position: absolute;
+  rotate: -45deg;
+  width: 55%;
+  opacity: 10%;
+  right: -10%;
+  top: 35%;
+}
+
 .main-holder {
   display: flex;
   justify-content: center;
@@ -39,7 +49,7 @@ body .container p {
   text-align: center;
   flex-direction: column;
   gap: 24px;
-  width: 50%;
+  max-width: 50%;
 }
 
 #number {

@@ -30,6 +30,7 @@ body {
     margin: 0;
     font-family: 'Arial', sans-serif;
     color: #ffffff;
+    overflow-x: hidden;
 
     .container {
         @include content-styles;
@@ -50,12 +51,21 @@ body {
     }
 }
 
+#bg-icon {
+    position: absolute;
+    rotate: -45deg;
+    width: 55%;
+    opacity: 10%;
+    right: -10%;
+    top: 35%;
+}
+
 .main-holder {
     @include flex-center;
     text-align: center;
     flex-direction: column;
     gap: 24px;
-    width: 50%;
+    max-width: 50%;
 }
 
 #number {
